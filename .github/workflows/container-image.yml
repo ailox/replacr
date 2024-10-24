@@ -15,11 +15,11 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - uses: ailox/replacr/.github/actions/replace-tag@30abd4ae4769d13346558f74c3683ce2f838af7a
+    - uses: ailox/replacr/.github/actions/replace-tag@eb8d4d0ea7422bbba05501c0993a2cbd9d1c25d1
       with:
         #old_tag: "tag 1"
         #new_tag: "tag 2"
-        file: tag-files/important-tags.txt
+        path: tag-files/
 
     - name: Push files with replaced content
       # checkout@v2 and up will automatically set up the GITHUB_TOKEN for
