@@ -5,7 +5,7 @@ on:
     branches: ["main"]
 
 jobs:
-  hello:
+  image:
     runs-on: ubuntu-latest
 
     permissions:
@@ -15,9 +15,11 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - run: |
-        find tag-files/ -type f -exec \
-          sed -i 's/\btag 1\b/tag 2/g' {} \;
+    - uses: ailox/replacr/.github/actions/replace-tag@30abd4ae4769d13346558f74c3683ce2f838af7a
+      with:
+        #old_tag: "tag 1"
+        #new_tag: "tag 2"
+        file: tag-files/important-tags.txt
 
     - name: Push files with replaced content
       # checkout@v2 and up will automatically set up the GITHUB_TOKEN for
