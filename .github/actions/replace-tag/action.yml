@@ -1,8 +1,8 @@
 name: 'Replace Tag'
 description: 'Replaces a tag in a text file'
 inputs:
-  file:
-    description: 'The file to modify'
+  path:
+    description: 'The path to modify files in'
     required: true
   old_tag:
     description: 'The old tag to replace'
@@ -16,6 +16,6 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.file }}
+    - ${{ inputs.path }}
     - ${{ inputs.old_tag }}
     - ${{ inputs.new_tag }}
