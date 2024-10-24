@@ -5,4 +5,4 @@ tag 1
 tag 3
 xtag 1
 tag 11
-tag 1 tag 2 tag 12 tag 1
+tag 1, tag 2, tag 12, tag 1
