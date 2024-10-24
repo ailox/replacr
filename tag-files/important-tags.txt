@@ -1,8 +1,8 @@
 # This file is the tag storage. You can commit everything you want,
 # But make sure to only use correct tags, otherwise they will be
 # corrected for you.
-tag 1
+tag 2
 tag 3
 xtag 1
 tag 11
-tag 1, tag 2, tag 12, tag 1
+tag 2, tag 2, tag 12, tag 2
