@@ -1,0 +1,21 @@
+name: 'Replace Tag'
+description: 'Replaces a tag in a text file'
+inputs:
+  file:
+    description: 'The file to modify'
+    required: true
+  old_tag:
+    description: 'The old tag to replace'
+    required: true
+    default: 'tag 1'
+  new_tag:
+    description: 'The new tag'
+    required: true
+    default: 'tag 2'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.file }}
+    - ${{ inputs.old_tag }}
+    - ${{ inputs.new_tag }}
